@@ -1,3 +1,6 @@
+# SHIT DOESN'T WORK, DON'T USE IT
+I may try to fix it one day. xD
+
 # RapidJarUploader
 Upload .jars over slow connections way faster with rsync.
 
@@ -9,8 +12,8 @@ sudo pip3 install zipp
 ```
 ### Your development machine
 ```
-./unpack_jar.py ~/MultiPaper/build/libs/MultiPaper-bundler-1.19.2-R0.1-SNAPSHOT-reobf.jar /tmp/multipaper/ "MultiPaper-MasterMessagingProtocol-1.19.2-R0.1-SNAPSHOT.jar|MultiPaper-API-1.19.2-R0.1-SNAPSHOT.jar|multipaper-1.19.2.jar"
-rsync -va multipaper root@youserver.org:/tmp/multipaper
+./unpack_jar.py ~/MultiPaper/build/libs/MultiPaper-bundler-1.19.2-R0.1-SNAPSHOT-reobf.jar /tmp/multipaper "MultiPaper-MasterMessagingProtocol-1.19.2-R0.1-SNAPSHOT.jar|MultiPaper-API-1.19.2-R0.1-SNAPSHOT.jar|multipaper-1.19.2.jar"
+rsync -va /tmp/multipaper root@youserver.org:/tmp/multipaper
 ```
 ### Remote server
 ```
@@ -19,4 +22,5 @@ rsync -va multipaper root@youserver.org:/tmp/multipaper
 
 ## Caveat
 RapidJarUploader doesn't support file removal. If you need to remove files just rm the directory on source and rsync with --delete.
-I personally don't need that feature. Patches are welcome.
+
+I personally don't need that feature, patches are welcome.
